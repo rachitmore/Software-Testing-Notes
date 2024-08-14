@@ -5,7 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # Initialize the WebDriver
-driver = webdriver.Chrome(executable_path='chromedriver.exe')
+driver = webdriver.Chrome('chromedriver.exe')
 
 try:
     # Step 1: Open the Application URL
@@ -27,7 +27,7 @@ try:
     email_input = WebDriverWait(driver, 10).until(
         EC.visibility_of_element_located((By.ID, "input-email"))
     )
-    email_input.send_keys("rachitmore2@gmail.com")
+    email_input.send_keys("pavanoltraining@gmail.com")
     
     password_input = driver.find_element(By.ID, "input-password")
     password_input.send_keys("P@ssw0rd")
